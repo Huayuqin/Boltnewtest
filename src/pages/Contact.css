@@ -1,0 +1,115 @@
+.contact {
+  min-height: 100vh;
+  padding: calc(var(--spacing-unit) * 10) 0;
+}
+
+.contact-hero {
+  max-width: 800px;
+  margin-bottom: calc(var(--spacing-unit) * 12);
+}
+
+.contact-hero h1 {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  color: var(--color-text-primary);
+}
+
+.contact-intro {
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.contact-content {
+  max-width: 900px;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: calc(var(--spacing-unit) * 5);
+  margin-bottom: calc(var(--spacing-unit) * 12);
+}
+
+.contact-method {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 3);
+  padding: calc(var(--spacing-unit) * 5);
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.contact-method:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.method-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.method-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 1);
+}
+
+.method-content h3 {
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+}
+
+.contact-link {
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--color-secondary);
+}
+
+.availability-notice {
+  padding: calc(var(--spacing-unit) * 6);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.availability-notice h2 {
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  color: white;
+}
+
+.availability-notice p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: calc(var(--spacing-unit) * 6) 0;
+  }
+
+  .contact-intro {
+    font-size: 1.25rem;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+}
